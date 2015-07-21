@@ -15,7 +15,7 @@ class hello():
     # except:
         # print(sys.exc_info())#################################older
 class Myapp(web.application):
-    def run(self,port=os.environ.get('PORT', 8080),*filllater):#########os.environ.get(...),nsure your application makes use of the port assigned to the user environment
+    def run(self,port=os.environ.get('PORT', 8080),*filllater):#########os.environ.get(...),ensure your application makes use of the port assigned to the user environment,on heroku:fill port=int(os.environ.get(...)) instead
         func = self.wsgifunc(*filllater)##########must have ?
         return web.httpserver.runsimple(func,('0.0.0.0',port))#####wsgifunc is must filled for runsimple()
 if __name__ == '__main__':
