@@ -8,7 +8,7 @@ urls = ('/','hello')
 class hello():
     def GET(self):
         # print(os.environ.get('PORT', 8080))###debug
-        return '<html>\n<body>\n<h1>Hello,there.</h1>\n<h2>'+ str(os.environ.get('PORT', 8080)) + '</h2>\n</body>\n</html>'
+        return '<html>\n<body>\n<h1>Hello,there.</h1>\n<h2>this time the env port is '+ str(os.environ.get('PORT', 8080)) + '</h2>\n</body>\n</html>'
 # if __name__ == '__main__':###################################older 
     # try:
         # webapp = web.application(urls, globals())
