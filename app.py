@@ -8,7 +8,7 @@ urls = ('/','hello')
 class hello():
     def GET(self):
         # print(os.environ.get('PORT', 8080))###debug      
-        return os.environ, os.uname(),sys.platform, os.name
+        return '<html>\n<body>\n<h1>Hello,there.</h1>\n<h2>this time the env port is '+ str(os.environ.get('PORT', 8080)) + '</h2>\n<h3>' +str((os.environ,os.uname(),sys.platform, os.name)) +'<h3>\n</body>\n</html>'
         # return '<html>\n<body>\n<h1>Hello,there.</h1>\n<h2>this time the env port is '+ str(os.environ.get('PORT', 8080)) + '</h2>\n</body>\n</html>'
 # if __name__ == '__main__':###################################older 
     # try:
