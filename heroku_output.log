@@ -1,0 +1,101 @@
+2015-07-21T08:06:28.198310+00:00 heroku[web.1]: State changed from starting to crashed
+2015-07-21T08:07:03.312845+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=m0nki.herokuapp.com request_id=7b2f7491-49d5-4d80-b88d-e77b210694c7 fwd="14.147.90.26" dyno= connect= service= status=503 bytes=
+2015-07-21T08:07:06.557466+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=m0nki.herokuapp.com request_id=d1f6cfe9-b740-4638-9769-80bf20779991 fwd="14.147.90.26" dyno= connect= service= status=503 bytes=
+2015-07-21T08:31:21.693890+00:00 heroku[web.1]: State changed from crashed to starting
+2015-07-21T08:31:26.657501+00:00 heroku[web.1]: Starting process with command `python  app.py`
+2015-07-21T08:31:28.579817+00:00 app[web.1]: http://0.0.0.0:8080/
+2015-07-21T08:32:27.085335+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+2015-07-21T08:32:27.085335+00:00 heroku[web.1]: Stopping process with SIGKILL
+2015-07-21T08:32:28.003426+00:00 heroku[web.1]: State changed from starting to crashed
+2015-07-21T08:32:27.988691+00:00 heroku[web.1]: Process exited with status 137
+2015-07-21T09:10:21.118054+00:00 heroku[slug-compiler]: Slug compilation started
+2015-07-21T09:10:21.118061+00:00 heroku[slug-compiler]: Slug compilation finished
+2015-07-21T09:10:21.060357+00:00 heroku[api]: Deploy f1be443 by loneli.monki@gmail.com
+2015-07-21T09:10:21.060357+00:00 heroku[api]: Release v7 created by loneli.monki@gmail.com
+2015-07-21T09:10:21.161533+00:00 heroku[web.1]: State changed from crashed to starting
+2015-07-21T09:10:25.380593+00:00 heroku[web.1]: Starting process with command `python  app.py`
+2015-07-21T09:10:27.648576+00:00 app[web.1]: http://0.0.0.0:8888/
+2015-07-21T09:11:25.553661+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+2015-07-21T09:11:25.553661+00:00 heroku[web.1]: Stopping process with SIGKILL
+2015-07-21T09:11:26.495855+00:00 heroku[web.1]: Process exited with status 137
+2015-07-21T09:11:26.510682+00:00 heroku[web.1]: State changed from starting to crashed
+2015-07-21T09:11:26.511737+00:00 heroku[web.1]: State changed from crashed to starting
+2015-07-21T09:11:29.474236+00:00 heroku[web.1]: Starting process with command `python  app.py`
+2015-07-21T09:11:31.262360+00:00 app[web.1]: http://0.0.0.0:8888/
+2015-07-21T09:12:29.895154+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+2015-07-21T09:12:29.895283+00:00 heroku[web.1]: Stopping process with SIGKILL
+2015-07-21T09:12:30.701988+00:00 heroku[web.1]: State changed from starting to crashed
+2015-07-21T09:12:30.678348+00:00 heroku[web.1]: Process exited with status 137
+2015-07-21T09:14:35.560715+00:00 heroku[api]: Deploy 17b6e8b by loneli.monki@gmail.com
+2015-07-21T09:14:35.560715+00:00 heroku[api]: Release v8 created by loneli.monki@gmail.com
+2015-07-21T09:14:35.607778+00:00 heroku[slug-compiler]: Slug compilation started
+2015-07-21T09:14:35.607786+00:00 heroku[slug-compiler]: Slug compilation finished
+2015-07-21T09:14:39.587427+00:00 heroku[web.1]: Starting process with command `python  app.py`
+2015-07-21T09:14:41.586167+00:00 app[web.1]: http://0.0.0.0:80/
+2015-07-21T09:14:41.586476+00:00 app[web.1]: (<class 'socket.error'>, error('No socket could be created',), <traceback object at 0x7fd7fff8cd88>)
+2015-07-21T09:14:42.378821+00:00 heroku[web.1]: Process exited with status 0
+2015-07-21T09:14:35.659578+00:00 heroku[web.1]: State changed from crashed to starting
+2015-07-21T09:14:42.394959+00:00 heroku[web.1]: State changed from starting to crashed
+2015-07-21T09:23:58.295538+00:00 heroku[slug-compiler]: Slug compilation started
+2015-07-21T09:23:58.295559+00:00 heroku[slug-compiler]: Slug compilation finished
+2015-07-21T09:23:58.238599+00:00 heroku[api]: Deploy 12d8058 by loneli.monki@gmail.com
+2015-07-21T09:23:58.238599+00:00 heroku[api]: Release v9 created by loneli.monki@gmail.com
+2015-07-21T09:23:58.343152+00:00 heroku[web.1]: State changed from crashed to starting
+2015-07-21T09:24:03.366635+00:00 heroku[web.1]: Starting process with command `python  app.py`
+2015-07-21T09:24:06.070413+00:00 app[web.1]: (<class 'socket.error'>, error('No socket could be created',), <traceback object at 0x7f3623691488>)
+2015-07-21T09:24:06.070105+00:00 app[web.1]: http://0.0.0.0:80/
+2015-07-21T09:24:07.086285+00:00 heroku[web.1]: State changed from starting to crashed
+2015-07-21T09:24:07.086285+00:00 heroku[web.1]: State changed from crashed to starting
+2015-07-21T09:24:06.991154+00:00 heroku[web.1]: Process exited with status 0
+2015-07-21T09:24:11.485799+00:00 heroku[web.1]: Starting process with command `python  app.py`
+2015-07-21T09:24:14.975050+00:00 app[web.1]: http://0.0.0.0:80/
+2015-07-21T09:24:14.975317+00:00 app[web.1]: (<class 'socket.error'>, error('No socket could be created',), <traceback object at 0x7fae8a071b48>)
+2015-07-21T09:24:15.747820+00:00 heroku[web.1]: Process exited with status 0
+2015-07-21T09:24:15.761919+00:00 heroku[web.1]: State changed from starting to crashed
+2015-07-21T09:45:52.898803+00:00 heroku[slug-compiler]: Slug compilation started
+2015-07-21T09:45:52.898819+00:00 heroku[slug-compiler]: Slug compilation finished
+2015-07-21T09:45:52.847745+00:00 heroku[api]: Deploy 3f90771 by loneli.monki@gmail.com
+2015-07-21T09:45:52.847745+00:00 heroku[api]: Release v10 created by loneli.monki@gmail.com
+2015-07-21T09:45:52.966306+00:00 heroku[web.1]: State changed from crashed to starting
+2015-07-21T09:45:57.511807+00:00 heroku[web.1]: Starting process with command `python  app.py`
+2015-07-21T09:45:59.242127+00:00 app[web.1]: http://0.0.0.0:8080/
+2015-07-21T09:46:57.679230+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+2015-07-21T09:46:57.679230+00:00 heroku[web.1]: Stopping process with SIGKILL
+2015-07-21T09:46:58.480041+00:00 heroku[web.1]: Process exited with status 137
+2015-07-21T09:46:58.488210+00:00 heroku[web.1]: State changed from starting to crashed
+2015-07-21T09:46:58.489317+00:00 heroku[web.1]: State changed from crashed to starting
+2015-07-21T09:47:02.247898+00:00 heroku[web.1]: Starting process with command `python  app.py`
+2015-07-21T09:47:03.956694+00:00 app[web.1]: http://0.0.0.0:8080/
+2015-07-21T09:48:02.299872+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+2015-07-21T09:48:02.299996+00:00 heroku[web.1]: Stopping process with SIGKILL
+2015-07-21T09:48:03.200475+00:00 heroku[web.1]: State changed from starting to crashed
+2015-07-21T09:48:03.184386+00:00 heroku[web.1]: Process exited with status 137
+2015-07-21T09:58:09.969653+00:00 heroku[api]: Deploy cd0dd02 by loneli.monki@gmail.com
+2015-07-21T09:58:09.969653+00:00 heroku[api]: Release v11 created by loneli.monki@gmail.com
+2015-07-21T09:58:10.027869+00:00 heroku[slug-compiler]: Slug compilation started
+2015-07-21T09:58:10.027900+00:00 heroku[slug-compiler]: Slug compilation finished
+2015-07-21T09:58:10.070559+00:00 heroku[web.1]: State changed from crashed to starting
+2015-07-21T09:58:13.676876+00:00 heroku[web.1]: Starting process with command `python  app.py`
+2015-07-21T09:58:15.569751+00:00 app[web.1]:   File "app.py", line 17
+2015-07-21T09:58:15.569769+00:00 app[web.1]:     def run(self,os.environ.get('PORT', 8080),*filllater):
+2015-07-21T09:58:15.569774+00:00 app[web.1]:                    ^
+2015-07-21T09:58:15.569795+00:00 app[web.1]: SyntaxError: invalid syntax
+2015-07-21T09:58:16.545473+00:00 heroku[web.1]: Process exited with status 1
+2015-07-21T09:58:16.559985+00:00 heroku[web.1]: State changed from starting to crashed
+2015-07-21T09:58:16.560807+00:00 heroku[web.1]: State changed from crashed to starting
+2015-07-21T09:58:24.776842+00:00 heroku[web.1]: Starting process with command `python  app.py`
+2015-07-21T09:58:26.026611+00:00 app[web.1]:   File "app.py", line 17
+2015-07-21T09:58:26.026634+00:00 app[web.1]:     def run(self,os.environ.get('PORT', 8080),*filllater):
+2015-07-21T09:58:26.026639+00:00 app[web.1]:                    ^
+2015-07-21T09:58:26.026641+00:00 app[web.1]: SyntaxError: invalid syntax
+2015-07-21T09:58:26.688158+00:00 heroku[web.1]: State changed from starting to crashed
+2015-07-21T09:58:26.677012+00:00 heroku[web.1]: Process exited with status 1
+2015-07-21T09:59:55.497195+00:00 heroku[api]: Deploy 387a208 by loneli.monki@gmail.com
+2015-07-21T09:59:55.497195+00:00 heroku[api]: Release v12 created by loneli.monki@gmail.com
+2015-07-21T09:59:55.546913+00:00 heroku[slug-compiler]: Slug compilation started
+2015-07-21T09:59:55.546928+00:00 heroku[slug-compiler]: Slug compilation finished
+2015-07-21T09:59:55.597537+00:00 heroku[web.1]: State changed from crashed to starting
+2015-07-21T09:59:58.728766+00:00 heroku[web.1]: Starting process with command `python  app.py`
+2015-07-21T10:00:00.435252+00:00 app[web.1]: (<type 'exceptions.TypeError'>, TypeError('%d format: a number is required, not str',), <traceback object at 0x7ffb817493f8>)
+2015-07-21T10:00:01.151174+00:00 heroku[web.1]: Process exited with status 0
+2015-07-21T10:00:01.166070+00:00 heroku[web.1]: State changed from starting to crashed
