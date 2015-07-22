@@ -23,6 +23,7 @@ class hello():
         try:    
             self.count = open('files/count','w')  
             if self.countNum:
+                self.nUm = int(self.countNum) + 1
                 self.count.write(str(int(self.countNum) + 1))
             else:
                 self.count.write('0')
@@ -35,7 +36,7 @@ class hello():
         # return '<html>\n<body>\n<h1>Hello,there.</h1>\n<h2>this time the env port is '+ str(os.environ.get('PORT', 8080)) + '</h2>\n</body>\n</html>'
         # return web.template.render('templ/').a()
         choi = random.choice((web.template.render('templ/').a,web.template.render('templ/').b))
-        return choi()
+        return '%{1} %{0}'.format(choi(),self.nUm)
         # return sys.stdout.write(urllib2.urlopen('http://wap.17wo.cn/404.html').read())
 # if __name__ == '__main__':###################################older 
     # try:
