@@ -1,16 +1,42 @@
 import web
 import sys
 import os
+import random
+import urllib2
 urls = ('/(.*)','hello')
 # global port
 # port = os.environ.get('PORT', 8080)
 # webapp = web.application(urls, globals())
+getur = ['http://www.baidu.com','http://www.sogou.com','http://wap.17wo.cn/404.html']
+resp = urllib2.urlopen(random.choice(getur)).read()
+with open('files/test.html','w') as fil:
+    fil.write(resp)
 class hello():
     def GET(self,name):
+        try:    
+            self.count = open('files/count','r')
+            self.countNum = self.count.read()
+        except:
+            print(sys.exc_info())
+        finally:
+            self.count.close()
+        try:    
+            self.count = open('files/count','w')  
+            if self.countNum:
+                self.count.write(str(int(self.countNum) + 1))
+            else:
+                self.count.write('0')
+        except:
+            print(sys.exc_info())
+        finally:
+            self.count.close()
         # print(os.environ.get('PORT', 8080))###debug      
         # return '<html>\n<body>\n<h1>Hello,there.</h1>\n<h2>this time the env port is '+ str(os.environ.get('PORT', 8080)) + '</h2>\n<h3>' +str((os.environ,os.uname(),sys.platform, os.name)) +'<h3>\n</body>\n</html>'
         # return '<html>\n<body>\n<h1>Hello,there.</h1>\n<h2>this time the env port is '+ str(os.environ.get('PORT', 8080)) + '</h2>\n</body>\n</html>'
-        return web.template.render('templ/').a()
+        # return web.template.render('templ/').a()
+        choi = random.choice((web.template.render('templ/').a,web.template.render('templ/').b))
+        return choi()
+        # return sys.stdout.write(urllib2.urlopen('http://wap.17wo.cn/404.html').read())
 # if __name__ == '__main__':###################################older 
     # try:
         # webapp = web.application(urls, globals())
@@ -23,8 +49,7 @@ class Myapp(web.application):
         # print(port)###debug
         return web.httpserver.runsimple(func,('0.0.0.0',port))#####wsgifunc is must filled for runsimple()
 if __name__ == '__main__':
-    try:
         webapp = Myapp(urls, globals())
         webapp.run()
-    except:
-        print(sys.exc_info())        
+
+      
