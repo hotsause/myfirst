@@ -24,7 +24,7 @@ class hello():
             self.count = open('files/count','w')  
             if self.countNum:
                 self.nUm = int(self.countNum) + 1
-                self.count.write(str(int(self.countNum) + 1))
+                self.count.write(str(self.nUm + 1))
             else:
                 self.count.write('0')
         except:
