@@ -9,12 +9,12 @@ urls = ('/(.*)','hello')
 # webapp = web.application(urls, globals())
 getur = ['http://www.baidu.com','http://www.sogou.com','http://wap.17wo.cn/404.html']
 resp = urllib2.urlopen(random.choice(getur)).read()
-with open('files/test.html','w') as fil:
+with open('files/test.html','w') as fil:#########just test files storage in heroku
     fil.write(resp)
 class hello():
     def GET(self,name):
         try:    
-            self.count = open('files/count','r')
+            self.count = open('files/count','r')#########just test files storage in heroku
             self.countNum = self.count.read()
         except:
             print(sys.exc_info())
@@ -37,7 +37,7 @@ class hello():
         # return web.template.render('templ/').a()
         choi = random.choice((web.template.render('templ/').a,web.template.render('templ/').b))
         return '%{1} %{0}'.format(choi(),self.nUm)
-        # return sys.stdout.write(urllib2.urlopen('http://wap.17wo.cn/404.html').read())
+        # return sys.stdout.write(urllib2.urlopen('http://wap.17wo.cn/404.html').read())###crash except for ie
 # if __name__ == '__main__':###################################older 
     # try:
         # webapp = web.application(urls, globals())
