@@ -4,18 +4,21 @@ import os
 import random
 import urllib2
 import b
+import cla
 urls = (
         # '/a(.+)','pagea1'#########something wrong
         '/a','pagea',
-        '/b',b.pageb,
-        '/(.*)','hello')
+        '/b',b.pageb,########################catch anything with b begins
+        # '/','index'
+        '/(^\w*)','other'############################something wrong
+        )
 # global port
 # port = os.environ.get('PORT', 8080)
 # webapp = web.application(urls, globals())
 getur = ['http://www.baidu.com','http://www.sogou.com','http://wap.17wo.cn/404.html']
-resp = urllib2.urlopen(random.choice(getur)).read()
-with open('files/test.html','w') as fil:#########just test files storage in heroku
-    fil.write(resp)
+# resp = urllib2.urlopen(random.choice(getur)).read()
+# with open('files/test.html','w') as fil:#########just test files storage in heroku
+    # fil.write(resp)
 class hello():
     def GET(self,name):
         try:    
@@ -53,19 +56,24 @@ class pagea():
     def GET(self):
         rend = web.template.render('templ/').a()
         return rend
-class pagea1():
+class index():
+    def GET(self,*argv):
+      return 'index'
+class other():
     def GET(self,*name):
-        return name
+        return 'other here'
 class pageb():
     def GET(self):
-        raise web.seeother('/a')##################code 303
-class Myapp(web.application):
-    def run(self,port=int(os.environ.get('PORT', 8080)),*filllater):#########os.environ.get(...),ensure your application makes use of the port assigned to the user environment,on heroku:fill port=int(os.environ.get(...)) instead for heroku dynamic assigned port every start
-        func = self.wsgifunc(*filllater)##########must have ?
-        # print(port)###debug
-        return web.httpserver.runsimple(func,('0.0.0.0',port))#####wsgifunc is must filled for runsimple()
+        # raise web.seeother('/a')##################code 303
+        return b.pageb
+# class Myapp(web.application):
+    # def run(self,port=int(os.environ.get('PORT', 8080)),*filllater):#########os.environ.get(...),ensure your application makes use of the port assigned to the user environment,on heroku:fill port=int(os.environ.get(...)) instead for heroku dynamic assigned port every start
+        # func = self.wsgifunc(*filllater)##########must have ?
+        ##print(port)###debug
+        # return web.httpserver.runsimple(func,('0.0.0.0',port))#####wsgifunc is must filled for runsimple()
+##########moved to cla.py      ######################################################  
+webapp = cla.Myapp(urls, locals())
 if __name__ == '__main__':
-        webapp = Myapp(urls, globals())
-        webapp.run()
+    webapp.run()
 
       

@@ -1,16 +1,21 @@
 import web
+# import app
+import cla
 urls = (
-        '/(.*)','dealb'
-        # '','home'
+
+
+        "",'dealb'  #########if '/(.*)' (from web.py official site) instead, response 404,and '(.*)' will catch anything begins with b 
             )
 class dealb():
-    def GET(self):
+    def GET(self,*argvs):
         rend = web.template.render('templ/').b()
-        # return rend
-        return 'b.py here'
+        return rend
+        # return 'b.py here'
 
 class home():    
     def GET(self):
         raise web.seeother('/')
 
-pageb = web.application(urls,locals())
+pageb = cla.Myapp(urls,locals())##########port spacify needed??
+# if __name__ == '__main__':
+    # pageb.run()################for test
