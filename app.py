@@ -10,8 +10,8 @@ urls = (
         # '/a(.+)','pagea1'#########something wrong,regular expression
         '/a',a.pagea,
         '/b',b.pageb,
-        # '/','index'
-        '/(^\w*)','other'############################something wrong
+        '/','index'
+        # '/(^\w*)','other'############################something wrong
         )
 # global port
 # port = os.environ.get('PORT', 8080)
@@ -54,8 +54,9 @@ class hello():
     # except:
         # print(sys.exc_info())#################################older
 class index():
-    def GET(self,*argv):
-      return 'index'
+    def GET(self):
+        rend = web.template.render('templ/').index((random.choice(range(50)),random.choice(range(50,100))))
+        return rend
 class other():
     def GET(self,*name):
         return 'other here'
