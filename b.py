@@ -1,6 +1,7 @@
 import web
 # import app
 import cla
+import os
 urls = (
 
 
@@ -9,7 +10,7 @@ urls = (
 class dealb():
     def GET(self,*argvs):
         rend = web.template.render('templ/').b()
-        return rend
+        return os.environ.get('PORT'),rend
         # return 'b.py here'
 
 class home():    

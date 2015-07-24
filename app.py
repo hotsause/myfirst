@@ -5,10 +5,11 @@ import random
 import urllib2
 import b
 import cla
+import a
 urls = (
-        # '/a(.+)','pagea1'#########something wrong
-        '/a','pagea',
-        '/b',b.pageb,########################catch anything with b begins
+        # '/a(.+)','pagea1'#########something wrong,regular expression
+        '/a',a.pagea,
+        '/b',b.pageb,
         # '/','index'
         '/(^\w*)','other'############################something wrong
         )
@@ -52,10 +53,6 @@ class hello():
         # webapp.run()
     # except:
         # print(sys.exc_info())#################################older
-class pagea():
-    def GET(self):
-        rend = web.template.render('templ/').a()
-        return rend
 class index():
     def GET(self,*argv):
       return 'index'
@@ -65,14 +62,14 @@ class other():
 class pageb():
     def GET(self):
         # raise web.seeother('/a')##################code 303
-        return b.pageb
+        return b.pageb#####not work
 # class Myapp(web.application):
     # def run(self,port=int(os.environ.get('PORT', 8080)),*filllater):#########os.environ.get(...),ensure your application makes use of the port assigned to the user environment,on heroku:fill port=int(os.environ.get(...)) instead for heroku dynamic assigned port every start
         # func = self.wsgifunc(*filllater)##########must have ?
         ##print(port)###debug
         # return web.httpserver.runsimple(func,('0.0.0.0',port))#####wsgifunc is must filled for runsimple()
 ##########moved to cla.py      ######################################################  
-webapp = cla.Myapp(urls, locals())
+webapp = cla.Myapp(urls, locals())####deal with application in other code file,port etc.
 if __name__ == '__main__':
     webapp.run()
 
