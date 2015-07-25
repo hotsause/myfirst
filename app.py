@@ -6,11 +6,13 @@ import urllib2
 import b
 import cla
 import a
+import form
 urls = (
         # '/a(.+)','pagea1'#########something wrong,regular expression
+        '/add',form.pageform,#####must placed beyond '/a' or return 404        
         '/a',a.pagea,
-        '/b',b.pageb,
-        '/','index'
+        '/b',b.pageb,      
+        '/','index',
         # '/(^\w*)','other'############################something wrong
         )
 # global port
@@ -57,6 +59,7 @@ class index():
     def GET(self):
         rend = web.template.render('templ/').index((random.choice(range(50)),random.choice(range(50,100))))
         return rend
+
 class other():
     def GET(self,*name):
         return 'other here'
