@@ -6,7 +6,7 @@ $#test on ${argv[0] - argv[1]}
 $:argv '\n'\	\	\
 $argv '\n'
 $$''\/
-$argv.title()
+$#argv.title()$#Return a titlecased version of str, i.e. words start with uppercase characters, all remaining cased characters have lowercase.
 
 $if 999 > max:
 	test
@@ -15,4 +15,49 @@ $else:
 $ a	=[1,2,3]
 $while a:
 	$a.pop()
-$for i in range(99): $i	
+$#for i in range(99): $i
+<!--	
+<table>
+$for c in ["a", "b", "c", "d"]:
+    <tr class="$loop.parity">
+        <td>$loop.index0</td>
+        <td>$c</td>
+    </tr>
+	<tr class="$loop.first">
+        <td>$loop.index0</td>
+        <td>$c</td>
+    </tr>
+	<tr class="$loop.last">
+        <td>$loop.index0</td>
+        <td>$c</td>
+    </tr>
+	<tr class="$loop.parent">
+        <td>$loop.index0</td>
+        <td>$c</td>
+    </tr>
+</table>
+-->
+<!--
+$def tr(values):
+    <tr>
+    $for v in values:
+        <td>$v</td>
+    </tr>
+
+$def table(rows):
+    <table>
+    $for row in rows:
+        $:row
+    </table>
+
+$ data = [['a', 'b', 'c'], [1, 2, 3], [2, 4, 6], [3, 6, 9] ]
+$:table([tr(d) for d in data])
+-->
+$code:
+	x = 9999
+$x
+<form action="form_action.asp" method="get">
+  First name: <input type="text" name="fname" />
+  Last name: <input type="text" name="lname" />
+  <input type="submit" value="Submit" />
+</form>
