@@ -1,6 +1,7 @@
 import web
 import cla
 import httplib
+# import urllib2
 import sys
 # import os
 urls = (
