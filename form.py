@@ -29,22 +29,20 @@ class fun():
         return 'None'
 class fun1():
     def GET(self):
-        if len(web.input()) > 1:
-            addr = str(web.input().addr)
-            if addr.startswith('http://'):
-                addr = addrresp = addr[7:]
-            try:
-                conn = HC(addr,timeout=100)
-                conn.request('get','/',headers = heaD)
-                resp = conn.getresponse() 
-                rend = web.template.render('templ/').form
-                cla.gloresp = (resp.getheaders(),resp.read())########baidu return badstatusline
-                return rend(cla.gloresp[0],cla.gloresp[1])###########global response, transfer to showresp.py
-            except:    
-                return sys.exc_info(),addr
-            finally:
-                conn.close()
-
-        else:
-            return None
+        addr = str(web.input().addr)
+        if len(addr) < 1:
+            addr = 'www.z.cn'
+        if addr.startswith('http://'):
+            addr = addrresp = addr[7:]
+        try:
+            conn = HC(addr,timeout=100)
+            conn.request('get','/',headers = heaD)
+            resp = conn.getresponse() 
+            rend = web.template.render('templ/').form
+            cla.gloresp = (resp.getheaders(),resp.read())########baidu return badstatusline
+            return rend(cla.gloresp[0],cla.gloresp[1])###########global response, transfer to showresp.py
+        except:    
+            return sys.exc_info(),addr
+        finally:
+            conn.close()
 pageform = cla.Myapp(urls,locals())      
