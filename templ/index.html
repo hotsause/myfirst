@@ -3,18 +3,18 @@ $def with (argv)
 $argv
 -->
 $#test on ${argv[0] - argv[1]}
-$:argv '\n'\	\	\
-$argv '\n'
-$$''\/
+$#$:argv '\n'\	\	\
+$#$argv '\n'
+$#$$''\/
 $#argv.title()$#Return a titlecased version of str, i.e. words start with uppercase characters, all remaining cased characters have lowercase.
 
-$if 999 > max:
-	test
-$else:
-	in else,$max
-$ a	=[1,2,3]
-$while a:
-	$a.pop()
+$#$if 999 > max:
+$#	test
+$#$else:
+$#	in else,$max
+$#$ a	=[1,2,3]
+$#$while a:
+$#	$a.pop()
 $#for i in range(99): $i
 <!--	
 <table>
@@ -53,31 +53,48 @@ $def table(rows):
 $ data = [['a', 'b', 'c'], [1, 2, 3], [2, 4, 6], [3, 6, 9] ]
 $:table([tr(d) for d in data])
 -->
-$code:
-	x = 9999
-$x
+$#$code:
+$#	x = 9999
+$#$x
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<meta http-equiv="Content-Language" content="zh-CN" />
+	<style type="text/css">
+		html{text-align:center;}
+		body{width:300px;margin:0 auto;background:#fff;text-align:left;}
+		<!--center 300px-->
+	</style>
+</head>
 <body>
-<style type="text/css">
-/*
-给body加了一个边框，可以看出，body已经居中了
-*/
-body {
- MARGIN: 0 AUTO;
- width: 700px;
- border: solid 1px #000;
-}
-</style>
-<div name="father" style="position: relative; MARGIN: 0 AUTO; width: 700px; height: 500px; ">
-   <div  align="center"; POSITION: absolute; TOP: 260px;">
-    这部分是相对于name="father"的div进行绝对定位的
+<div>
 
-   
+<table cellspacing="30" >
+<tr>
+  <td> </td>
+</tr>
+<tr>
+  <td> </td>
+</tr>
+<tr>
+  <td> </td>
+</tr>
+</table>
+<!--ԾωԾ blank talbe to fill the blank ԾωԾ-->
+<img src="static/003.gif" hidefocus="true"><img src="static/Allenlaugh.gif" hidefocus="true"><img src="static/Erivictory.gif" hidefocus="true"><img src="static/Marco_wobbling_pistol.gif" hidefocus="true"><img src="static/Marcovictory2.gif" hidefocus="true">
 <form action="add" method="get">
-  addr: <input type="text" name="addr" placeholder='www.z.cn' />$###placeholder for default value
+  addr: <input type="text" name="addr" placeholder='www.z.cn' />
+<!--placeholder for default value-->
   <!--Last name: <input type="text" name="second" />  -->
   <input type="submit" value="Submit" />
 </form>
-</div>
+<h4>
+returning a badstatusline exception on baidu.             	ԾωԾ
+ </h4>
 </div>
 </body>
-
+</html>
+<!--html codes above found from internet:http://bbs.blueidea.com/thread-2893062-1-1.html;
+http://www.w3school.com.cn-->
