@@ -4,6 +4,7 @@
 import web
 import os
 # import urllib2
+gloresp = ''
 class Myapp(web.application):
     def run(self,port=int(os.environ.get('PORT', 80)),*filllater):#########os.environ.get(...),ensure your application makes use of the port assigned to the user environment,on heroku:fill port=int(os.environ.get(...)) instead for heroku dynamic assigned port every start
         func = self.wsgifunc(*filllater)##########must have ?

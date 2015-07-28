@@ -7,12 +7,15 @@ import b
 import cla
 import a
 import form
+import showresp
 urls = (
         # '/a(.+)','pagea1'#########something wrong,regular expression
         '/add',form.pageform,#####must placed beyond '/a' or return 404        
         '/a',a.pagea,
-        '/b',b.pageb,      
+        '/b',b.pageb,
+        '/showresp',showresp.show,
         '/','index',
+        # '/(.*)','other'
         # '/(^\w*)','other'############################something wrong
         )
 # global port

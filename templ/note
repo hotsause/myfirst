@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+  <style type="text/css">
+/*
+给body加了一个边框，可以看出，body已经居中了
+*/
+body {
+ MARGIN: 0 AUTO;
+ width: 700px;
+ border: solid 1px #000;
+}
+</style>
+
+ </head>
+ <body>
+
+  <!-- 在该div里面设置position:relative;则该div里面设为绝对定位的元素将是相对于该div进行绝对定位了-->
+  <div
+   style="position: relative; MARGIN: 0 AUTO; width: 200px; height: 400px; background: orange;"
+   name="father">
+
+
+   <div style="LEFT: 0px; POSITION: absolute; TOP: 260px;">
+    这部分是相对于name="father"的div进行绝对定位的
+
+   </div>
+
+  </div>
+
+  <div style="LEFT: 0px; POSITION: absolute; TOP: 260px;">
+   这部分是相对于当前窗口进行绝对定位的
+
+  </div>
+
+ </body>
+</html>
+</html>

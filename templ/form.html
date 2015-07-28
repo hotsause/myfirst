@@ -1,0 +1,49 @@
+$def with (arg1,arg2)
+$#$:arg $####By default, Templetor uses web.websafe filter to do HTML-encoding£¬turn off filter needed here,use : after $ to show the page
+<!--
+<input type ="button" onclick="javascript:location.href=127.0.0.1/" value="go"></input>
+-->
+<!--
+<input type ="button" onclick="window.location.reload('index.html')" value="go"></input>
+-->
+<!--
+<input action="action" type="button" value="Back" onclick="history.go(-1);" />$####this work ,go back
+-->
+<script type="text/javascript">
+//<!--
+function goToURL(val){
+location.href = val;
+}
+//-->
+</script>
+
+<BUTTON ONCLICK="javascript:goToURL('/')">Back</BUTTON>
+
+<input type="button" value="show the response"
+onclick="window.open('http://127.0.0.1/showresp')"> $####this work, open a new tab 
+<!--
+<a onclick="javascript:GoToHomePage()" href="javascript:void(0)">Home</a>
+function GoToHomePage()
+{
+    window.location = '/';   
+}
+-->
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>response</title>
+</head><body>
+<h2>
+Header
+</h2>
+<p>
+$for i in arg1:
+	<p>$:i[0]-->$:i[1]</p>
+</p>
+<h3>
+Response
+</h3>
+<p>
+$arg2
+</p>
+</body></html>
+ 
