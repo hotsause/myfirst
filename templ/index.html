@@ -57,10 +57,27 @@ $code:
 	x = 9999
 $x
 <body>
+<style type="text/css">
+/*
+给body加了一个边框，可以看出，body已经居中了
+*/
+body {
+ MARGIN: 0 AUTO;
+ width: 700px;
+ border: solid 1px #000;
+}
+</style>
+<div name="father" style="position: relative; MARGIN: 0 AUTO; width: 700px; height: 500px; ">
+   <div  align="center"; POSITION: absolute; TOP: 260px;">
+    这部分是相对于name="father"的div进行绝对定位的
+
+   
 <form action="add" method="get">
   addr: <input type="text" name="addr" placeholder='www.z.cn' />$###placeholder for default value
   <!--Last name: <input type="text" name="second" />  -->
   <input type="submit" value="Submit" />
 </form>
+</div>
+</div>
 </body>
 
