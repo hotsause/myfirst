@@ -41,7 +41,7 @@ class fun1():
                 cla.gloresp = (resp.getheaders(),resp.read())########baidu return badstatusline
                 return rend(cla.gloresp[0],cla.gloresp[1])###########global response, transfer to showresp.py
             except:    
-                return sys.exc_info()
+                return sys.exc_info(),addr
             finally:
                 conn.close()
 
