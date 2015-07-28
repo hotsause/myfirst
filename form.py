@@ -29,7 +29,7 @@ class fun():
         return 'None'
 class fun1():
     def GET(self):
-        if web.input():
+        if len(web.input()) > 1:
             addr = str(web.input().addr)
             if addr.startswith('http://'):
                 addr = addrresp = addr[7:]
