@@ -1,4 +1,4 @@
-$def with (arg1,arg2)
+$def with (arg1,arg2,arg3,arg4,arg5)
 $#$:arg $####By default, Templetor uses web.websafe filter to do HTML-encoding£¬turn off filter needed here,use : after $ to show the page
 <!--
 <input type ="button" onclick="javascript:location.href=127.0.0.1/" value="go"></input>
@@ -33,8 +33,11 @@ function GoToHomePage()
 <title>response</title>
 </head><body>
 <h2>
-Header
+Headers
 </h2>
+<h3>
+HTTP/$arg3,$arg4,$arg5
+</h3>
 <p>
 $for i in arg1:
 	<p>$:i[0]-->$:i[1]</p>
